@@ -5,7 +5,7 @@ const mobileQuery = window.matchMedia("(max-width: 768px)");
 const isMobile = mobileQuery.matches;
 
 let position = 40;
-let speed = isMobile ? 1.5 : 1;
+let speed = isMobile ? 2 : 1.25;
 let targetSpeed = speed;
 
 /* hover only on desktop */
@@ -17,7 +17,7 @@ if (!isMobile) {
 	});
 
 	container.addEventListener("mouseleave", () => {
-		targetSpeed = 1;
+		targetSpeed = 1.25;
 	});
 }
 
