@@ -13,7 +13,7 @@ if (!isMobile) {
 	const container = document.querySelector(".header-container");
 
 	container.addEventListener("mouseenter", () => {
-		targetSpeed = 0.5;
+		targetSpeed = 0.75;
 	});
 
 	container.addEventListener("mouseleave", () => {
