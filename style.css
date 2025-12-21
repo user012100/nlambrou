@@ -28,9 +28,10 @@ header {
   -ms-user-select: none;
   user-select: none;
   cursor: default;
+  text-transform: uppercase;
 }
 
-h1, .inter-header {
+h1, span {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
@@ -40,6 +41,31 @@ h1, .inter-header {
   padding-right: 28px;
 }
 
+.marquee {
+	overflow: hidden;
+	width: 100%;
+}
+
+.marquee-track {
+	display: inline-flex;
+	align-items: center;
+	white-space: nowrap;
+	will-change: transform;
+}
+
+.marquee-h1 {
+	margin: 0;
+	line-height: 1;
+}
+
+@keyframes marquee {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}
 
 nav {
   position: relative;
@@ -308,6 +334,10 @@ p {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+a {
+  text-transform: uppercase;
 }
 
 .contact {
