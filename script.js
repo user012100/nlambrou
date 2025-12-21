@@ -1,18 +1,25 @@
 const track = document.querySelector(".marquee-track");
 
+/* screen size checks */
+const mobileQuery = window.matchMedia("(max-width: 768px)");
+const isMobile = mobileQuery.matches;
+
 let position = 40;
-let speed = 0.9;
-let targetSpeed = 0.9;
+let speed = isMobile ? 1.5 : 1;
+let targetSpeed = speed;
 
-const container = document.querySelector(".header-container");
+/* hover only on desktop */
+if (!isMobile) {
+	const container = document.querySelector(".header-container");
 
-container.addEventListener("mouseenter", () => {
-	targetSpeed = 0.5;
-});
+	container.addEventListener("mouseenter", () => {
+		targetSpeed = 0.5;
+	});
 
-container.addEventListener("mouseleave", () => {
-	targetSpeed = 0.9;
-});
+	container.addEventListener("mouseleave", () => {
+		targetSpeed = 1;
+	});
+}
 
 function animate() {
 	speed += (targetSpeed - speed) * 0.06;
