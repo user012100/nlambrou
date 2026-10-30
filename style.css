@@ -390,3 +390,25 @@ a {
   text-decoration: none;
   font-size: 13px;
 }
+
+.site-credit {
+  font-family: "Inter", sans-serif;
+  font-weight: 175;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: white;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 13px;
+  margin-top: -25px;
+  padding: 0 5px 50px;
+}
+
+.site-credit a {
+  color: white;
+  text-decoration: none;
+}
+
+.site-credit a:hover {
+  color: gray;
+}
